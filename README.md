@@ -19,24 +19,18 @@ limitations under the License.
 **TL;DR**
 - set of re-usable coarse-grained components (just a bunch of code)
 - think of tasks, not functions (e.g., read from a database, transform data, train model, deploy model)
-- write once, runs everywhere (export to Kubeflow, Apache Airflow, Apache Nifi)
+- write once, runs everywhere: Kubeflow, Apache Airflow, CLI, KNative, Docker, Kubernetes
+- orchestrate with anything: shell script, Kubeflow, Airflow, Argo, Tekton
+- persistence layer / queue agnostic: Cloud Object Storage, file systems, PVC, Kafka, MQTT
 - just use Python - no other skills required (no Kubeflow component YAML, maven, Java)
 - 1st class citizen in JupyterLab and the Elyra Pipeline Editor (creating a low code / no code IDE for data science)
 - upstream repository to IBM Watson Studio Pipelines contributed components in IBM Cloud Pak for Data
 
 
-This is a component library for artificial intelligence, machine learning,
-"extract, transform, load" processes and data science.
-The goal is to enable low-code/no-code rapid prototyping by providing
-ready-made components for various business domains,
-supporting various computer languages, working on various data flow editors and
-running on diverse execution engines.
-To demonstrate its utility, we constructed a workflow composed exclusively of this library's components.
-To demonstrate the capabilities of this library, we made use of a publicly available Computed Tomography (CT) scans dataset [covidata]
-and created a deep learning model, which is supposed to classify exams as either
-COVID-19 positive or negative. The pipeline was built with Elyra's Pipeline Visual Editor,
-with support for local, Airflow and Kubeflow execution ([CLAIMED, a visual and scalable component library for
-Trusted AI - SciPy2021](http://dx.doi.org/10.25080/majora-1b6fd038-007)).
+
+
+CLAIMED is a component library for artificial intelligence, machine learning, "extract, transform, load" processes, and data science. The goal is to enable low-code/no-code rapid prototyping. The library provides ready-made components for various business domains, supports multiple computer languages, works on different data flow editors, and runs various execution engines. To demonstrate its utility, we constructed a workflow composed exclusively of this library's components. To display the capabilities of this library, we made use of a publicly available Computed Tomography (CT) scan dataset [covidata]. We created a deep learning model, which is supposed to classify exams as either COVID-19 positive or negative. We built the pipeline with Elyra's Pipeline Visual Editor, with support for local, Airflow, and Kubeflow execution [https://arxiv.org/abs/2103.03281](https://arxiv.org/abs/2103.03281).
+
 
 ![Low Code / No Code pipeline creation tool for data science](https://github.com/IBM/claimed/raw/master/images/elyra_pipeline.png)
 *Low Code / No Code pipeline creation tool for data science*
